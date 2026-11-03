@@ -41,7 +41,7 @@ Comprender el funcionamiento de los arreglos en memoria y demostrar cómo se pue
 6. Observar el resultado del redimensionamiento.
 
 ## Autor
-Nombre del alumno:Cristp
+Nombre del alumno:Cristo
 
 ## Actividad
 Unidad 1: Introducción a las estructuras de datos.
