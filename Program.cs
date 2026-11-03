@@ -11,41 +11,73 @@ namespace ProgramaMemoriaEstatica
             Console.WriteLine("       MEMORIA ESTATICA");
             Console.WriteLine("==================================");
 
-            // Crear un arreglo inicial de 3 posiciones
-            int[] numeros = new int[3];
+            // Solicitar el tamaño inicial
+            int cantidad = LeerEntero("Ingrese el tamaño inicial del arreglo: ", 1);
 
-            // Almacenar valores
-            numeros[0] = 10;
-            numeros[1] = 20;
-            numeros[2] = 30;
+            int[] numeros = new int[cantidad];
+
+            // Llenar el arreglo
+            Console.WriteLine("\nIngrese los valores del arreglo:");
+
+            for (int i = 0; i < numeros.Length; i++)
+            {
+                numeros[i] = LeerEntero($"Posicion [{i}]: ", 0);
+            }
 
             Console.WriteLine("\nArreglo original:");
             MostrarArreglo(numeros);
 
-            // Redimensionar el arreglo a 5 posiciones
-            Array.Resize(ref numeros, 5);
+            // Solicitar el nuevo tamaño
+            int nuevoTamano = LeerEntero(
+                "\nIngrese el nuevo tamaño del arreglo: ", 1);
 
-            // Agregar nuevos valores
-            numeros[3] = 40;
-            numeros[4] = 50;
+            // Redimensionar el arreglo
+            Array.Resize(ref numeros, nuevoTamano);
 
-            Console.WriteLine("\nArreglo redimensionado:");
+            // Solicitar valores para las nuevas posiciones
+            if (nuevoTamano > cantidad)
+            {
+                Console.WriteLine("\nIngrese los valores de las nuevas posiciones:");
+
+                for (int i = cantidad; i < nuevoTamano; i++)
+                {
+                    numeros[i] = LeerEntero($"Posicion [{i}]: ", 0);
+                }
+            }
+
+            Console.WriteLine("\nArreglo final:");
             MostrarArreglo(numeros);
 
-            Console.WriteLine("\nCantidad de elementos: " + numeros.Length);
-
-            Console.WriteLine("\nPresiona una tecla para salir...");
+            Console.WriteLine("\nTamaño final: " + numeros.Length);
+            Console.WriteLine("\nPresione una tecla para salir...");
             Console.ReadKey();
         }
 
-        // Metodo para mostrar los elementos del arreglo
+        // Metodo para mostrar los elementos
         static void MostrarArreglo(int[] arreglo)
         {
-            foreach (int numero in arreglo)
+            for (int i = 0; i < arreglo.Length; i++)
             {
-                Console.WriteLine(numero);
+                Console.WriteLine($"Posicion [{i}]: {arreglo[i]}");
+            }
+        }
+
+        // Metodo para validar numeros enteros
+        static int LeerEntero(string mensaje, int minimo)
+        {
+            int valor;
+
+            while (true)
+            {
+                Console.Write(mensaje);
+
+                if (int.TryParse(Console.ReadLine(), out valor) && valor >= minimo)
+                {
+                    return valor;
+                }
+
+                Console.WriteLine($"Ingrese un numero entero mayor o igual a {minimo}.");
             }
         }
     }
 }
-
