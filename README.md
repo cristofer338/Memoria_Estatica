@@ -1,49 +1,43 @@
-# Memoria_Estatica
-
-# Programa 1: Memoria Estática
+# Programa de Memoria Estática
 
 ## Descripción
-Este proyecto consiste en desarrollar un programa en C# que permite trabajar con arreglos y demostrar cómo se pueden redimensionar durante la ejecución.
-
-El programa permite crear un arreglo, almacenar elementos, modificar su tamaño y conservar los datos existentes.
+Este programa en C# permite crear, llenar y redimensionar arreglos de números enteros durante la ejecución. El usuario puede elegir el tamaño inicial, ingresar los valores y posteriormente modificar el tamaño del arreglo.
 
 ## Objetivo
-Comprender el funcionamiento de los arreglos en memoria y demostrar cómo se puede cambiar su capacidad durante la ejecución de un programa.
+Demostrar el comportamiento de los arreglos de tamaño fijo y cómo pueden redimensionarse durante la ejecución mediante el método `Array.Resize()`.
 
 ## Tecnologías utilizadas
 - Lenguaje: C#
-- Entorno de desarrollo: Visual Studio
+- Plataforma: .NET
+- Entorno de desarrollo: Visual Studio 2022
 - Tipo de aplicación: Consola
-- Framework: .NET
 
 ## Funcionalidades
-- Crear arreglos con diferentes tamaños.
-- Introducir elementos mediante el usuario.
-- Mostrar los elementos almacenados.
-- Redimensionar arreglos durante la ejecución.
-- Conservar los datos al cambiar el tamaño.
-- Agregar nuevos elementos al arreglo.
+- Solicitar al usuario el tamaño inicial del arreglo.
+- Capturar los valores de cada posición.
+- Mostrar el contenido del arreglo original.
+- Permitir aumentar o reducir el tamaño del arreglo.
+- Solicitar valores para las nuevas posiciones cuando aumenta su tamaño.
+- Mostrar el arreglo final y su tamaño.
 
 ## Conceptos aplicados
-- Arreglos unidimensionales.
-- Memoria estática.
-- Redimensionamiento de arreglos.
-- Uso de `Array.Resize()`.
-- Ciclos y métodos.
-- Entrada y salida de datos.
+
+- **Arreglos:** estructuras que almacenan varios elementos del mismo tipo.
+- **Tamaño fijo:** una vez creado, el arreglo no cambia directamente de tamaño.
+- **Array.Resize():** permite crear un nuevo arreglo con el tamaño indicado y conservar los elementos que caben.
+- **Métodos:** se utilizan para mostrar los elementos y validar los datos ingresados.
+- **Validación:** se comprueba que los valores introducidos sean números enteros válidos.
 
 ## Ejecución
-1. Abrir el proyecto en Visual Studio.
+1. Abrir el proyecto en Visual Studio 2022.
 2. Ejecutar la aplicación.
 3. Introducir el tamaño inicial del arreglo.
-4. Ingresar los valores solicitados.
-5. Seleccionar el nuevo tamaño.
-6. Observar el resultado del redimensionamiento.
+4. Ingresar los números solicitados.
+5. Introducir el nuevo tamaño.
+6. Observar el contenido y tamaño final del arreglo.
 
 ## Autor
-Nombre del alumno:Cristo
+Cristofer
 
 ## Actividad
-Unidad 1: Introducción a las estructuras de datos.
-
 Tarea 1.2: Práctica de programación – Memoria estática vs. Memoria dinámica.
